@@ -1,0 +1,133 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Copilot - Ingeniería de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 1. Hero Section -->
+    <header id="hero">
+        <div id="particles-container"></div>
+        <div class="hero-content">
+            <img src="logo.svg" alt="Los Copilot Logo" class="logo">
+            <h1>Programando el futuro, vuelo a vuelo</h1>
+            <button class="cta-button">Conócenos</button>
+        </div>
+    </header>
+
+    <!-- 2. Sobre Nosotros -->
+    <section id="about-us">
+        <h2>Sobre Nosotros</h2>
+        <div class="team-photo">
+            <img src="team.jpg" alt="Nuestro Equipo">
+        </div>
+        <p>Somos Los Copilot, un equipo de estudiantes de Ingeniería de Sistemas apasionados por la tecnología, el
+            desarrollo de software y la innovación. Juntos, navegamos los desafíos académicos y proyectos con
+            creatividad y precisión.</p>
+
+        <div class="team-cards">
+            <div class="card">
+                <h3>JHIMY MC</h3>
+                <p>Especialista en Backend & Seguridad</p>
+                <p>Hobby: Ajedrez y desarrollo de APIs</p>
+            </div>
+            <div class="card">
+                <h3>FATIMA TJ</h3>
+                <p>Experta en Frontend & UX/UI</p>
+                <p>Hobby: Diseño gráfico y videojuegos</p>
+            </div>
+            <div class="card">
+                <h3>URPI PA</h3>
+                <p>Líder de Proyectos & Base de Datos</p>
+                <p>Hobby: Inteligencia Artificial y fotografía</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Proyectos Destacados -->
+    <section id="projects">
+        <h2>Proyectos Destacados</h2>
+        <div class="project-cards">
+            <div class="card">
+                <h3>Sistema de Votación Blockchain</h3>
+                <p>Tecnologías: Python, React, MySQL</p>
+                <a href="#" class="github-button">Ver GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Plataforma de E-commerce Inteligente</h3>
+                <p>Tecnologías: Node.js, Angular, MongoDB</p>
+                <a href="#" class="github-button">Ver GitHub</a>
+            </div>
+            <div class="card">
+                <h3>Asistente Virtual para la Salud Mental</h3>
+                <p>Tecnologías: Java, Android, Firebase</p>
+                <a href="#" class="github-button">Ver GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <div class="contact-info">
+            <p>✉️ Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="beddd1d0cadfddcad1fed2d1cdddd1ced7d2d1ca90dbdacb90cedb">[email&#160;protected]</a></p>
+            <p>📍 Dirección: Av. Tecnológica 123, Lima, Perú</p>
+            <div class="social-links">
+                <a href="github.com/loscopilot">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer>
+        <p>© 2024 Los Copilot - Preparados para despegar en la industria tech.</p>
+        <div class="social-icons">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)-->
+                    <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.58-298.583 298.58-59.647 0-114.682-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.28-16.686 130.079-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.516 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.72-84.182-51.607-84.182-102.966v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.249 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.801-1.299-9.42-2.024-18.843-2.024-28.264 0-27.615 8.552-53.211 22.791-75.295 62.308-3.265 119.143 25.324 135.542 61.053 8.143-3.224 16.392-6.105 24.52-9.13-2.686 8.255-8.255 16.244-16.244 20.749 7.436-.739 14.683-2.024 21.916-3.889 10.688-6.387 20.614-14.77 27.866-24.14 4.964-2.28 9.768-4.772 14.304-7.326z" />
+                </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)-->
+                    <path
+                        d="M224,256c70.7,0,128-57.3,128-128S294.7,0,224,0S96,57.3,96,128S153.3,256,224,256Zm0,48c-79.5,0-240,46.5-240,138.7V480c0,17.7,14.3,32,32,32H416c17.7,0,32-14.3,32-32V442.7C464,349.5,303.5,304,224,304Z" />
+                </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)-->
+                    <path
+                        d="M224.1 141c-63.6 0-114.6 51-114.6 114.6 0 62.8 51 114.6 114.6 114.6 62.8 0 114.6-51.8 114.6-114.6 0-63.6-51-114.6-114.6-114.6zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7 0-41.1 33.5-74.7 74.7-74.7 41.1 0 74.7 33.5 74.7 74.7 0 41.1-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8 0-14.9 12-26.8 26.8-26.8 14.9 0 26.8 12 26.8 26.8zm76.1 27.4c-1.2-35.9-30.8-65.5-66.7-66.7-36-1.2-61.6 29-62.8 64.9-1.2 35.9 30.8 65.5 66.7 66.7 36 1.2 61.6-29 62.8-64.9z" />
+                    <path
+                        d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.6 366.6c-2.1 0-4.3-.1-6.4-.3-44.9-2.3-83.5-25.8-107.8-60.8-29-43.9-45.3-91.1-45.3-138.8q0-46.2 29.1-89.2 29.1-42.8 73.1-72.1 16.6-10.5 35.7-10.5 19.1 0 35.7 10.5 44.1 29.2 73.2 72.1 29.1 46.2 29.1 89.2q0 47.8-45.3 91.1c-24.3 35-62.9 58.5-107.8 60.8-2.2.1-4.3.3-6.4.3z" />
+                </svg></a>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>
