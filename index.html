@@ -46,26 +46,26 @@
             <div class="card">
                 <img src="JMC.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>JHIMY MC</h3>
-                <p>Especialista en Backend & Seguridad</p>
-                <p>Hobby: Ajedrez y desarrollo de APIs</p>
+                <p>🛠️ Especialista en Inteligencia Artificial & Machine Learning</p>
+                <p>🎯 Hobby: Resolver problemas en Kaggle y entrenar modelos de IA para videojuegos</p>
             </div>
             <div class="card">
                 <img src="Fatima.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>FATIMA TJ</h3>
-                <p>Experta en Frontend & UX/UI</p>
-                <p>Hobby: Diseño gráfico y videojuegos</p>
+                <p>🖥️ Desarrolladora Full Stack & UX/UI Designer</p>
+                <p>🎨 Hobby: Diseñar interfaces intuitivas y aprender sobre accesibilidad web</p>
             </div>
             <div class="card">
                 <img src="Kris.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>URPI PA</h3>
-                <p>Líder de Proyectos & Base de Datos</p>
-                <p>Hobby: Inteligencia Artificial y fotografía</p>
+                <p>🔐 Especialista en Ciberseguridad & Pentesting</p>
+                <p>🕵️ Hobby: Participar en CTFs y analizar vulnerabilidades en sistemas</p>
             </div>
             <div class="card">
                 <img src="Anel.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>Anel RN</h3>
-                <p>Líder de Proyectos & Base de Datos</p>
-                <p>Hobby: Inteligencia Artificial y fotografía</p>
+                <p>📡 Experta en Redes & Cloud Computing</p>
+                <p>☁️ Hobby: Configurar servidores en la nube y probar arquitecturas distribuidas</p>
             </div>
         </div>
     </section>
@@ -122,7 +122,7 @@
                 mensaje: document.getElementById("mensaje").value
             };
 
-            fetch("TU_SCRIPT_URL", {
+            fetch("https://script.google.com/macros/s/AKfycbxFHWF60U4zdKv_DrNQJcvEyeM2cdPj8OG3GfTl791IC1Opx-rgjCK90f8m_gEAuFzgjw/exec", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
@@ -137,6 +137,39 @@
                 .catch(error => alert("Error al enviar el mensaje"));
         });
     </script>
+
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let formData = {
+                nombre: document.getElementById("nombre").value,
+                email: document.getElementById("email").value,
+                mensaje: document.getElementById("mensaje").value
+            };
+
+            fetch("https://script.google.com/macros/s/AKfycbyVHSiqIbKfx8AcSycVYDp_iWSyHuTyB6Z1s22m7FUIc4pArqXnV8f5qSbYkVdAXlwjDw/exec", {
+                method: "POST",
+                mode: "cors",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log("Respuesta del servidor:", data);
+                    alert("Mensaje enviado correctamente.");
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(error => {
+                    console.error("Error al enviar el mensaje:", error);
+                    alert("Error al enviar el mensaje. Revisa la consola.");
+                });
+        });
+    </script>
+
 
 
     <!-- 5. Footer -->
