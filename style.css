@@ -229,3 +229,14 @@ svg {
     height: 30px;
     fill: #E53935;
 }
+
+.team-cards .card img {
+    width: 80px;
+    /* Ajusta el tamaño según prefieras */
+    height: 80px;
+    /* Mantiene la proporción */
+    border-radius: 50%;
+    /* Opcional: lo hace circular */
+    object-fit: cover;
+    /* Evita deformaciones */
+}

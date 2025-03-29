@@ -44,17 +44,26 @@
 
         <div class="team-cards">
             <div class="card">
+                <img src="JMC.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>JHIMY MC</h3>
                 <p>Especialista en Backend & Seguridad</p>
                 <p>Hobby: Ajedrez y desarrollo de APIs</p>
             </div>
             <div class="card">
+                <img src="Fatima.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>FATIMA TJ</h3>
                 <p>Experta en Frontend & UX/UI</p>
                 <p>Hobby: Diseño gráfico y videojuegos</p>
             </div>
             <div class="card">
+                <img src="Kris.jpg" alt="Imagen no encontrada busca los archivos">
                 <h3>URPI PA</h3>
+                <p>Líder de Proyectos & Base de Datos</p>
+                <p>Hobby: Inteligencia Artificial y fotografía</p>
+            </div>
+            <div class="card">
+                <img src="Anel.jpg" alt="Imagen no encontrada busca los archivos">
+                <h3>Anel RN</h3>
                 <p>Líder de Proyectos & Base de Datos</p>
                 <p>Hobby: Inteligencia Artificial y fotografía</p>
             </div>
@@ -87,21 +96,48 @@
     <section id="contact">
         <h2>Contacto</h2>
         <form id="contact-form">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Mensaje"></textarea>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
             <button type="submit">Enviar Mensaje</button>
         </form>
+
         <div class="contact-info">
-            <p>✉️ Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                    data-cfemail="beddd1d0cadfddcad1fed2d1cdddd1ced7d2d1ca90dbdacb90cedb">[email&#160;protected]</a></p>
-            <p>📍 Dirección: Av. Tecnológica 123, Lima, Perú</p>
+            <p>✉️ Email: <a href="mailto:loscopilot@gmail.com">loscopilot@gmail.com</a></p>
             <div class="social-links">
-                <a href="github.com/loscopilot">GitHub</a>
-                <a href="#">LinkedIn</a>
+                <a href="https://github.com/loscopilot" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita recargar la página
+
+            let data = {
+                nombre: document.getElementById("nombre").value,
+                email: document.getElementById("email").value,
+                mensaje: document.getElementById("mensaje").value
+            };
+
+            fetch("TU_SCRIPT_URL", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Muestra mensaje de confirmación
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(error => alert("Error al enviar el mensaje"));
+        });
+    </script>
+
 
     <!-- 5. Footer -->
     <footer>
