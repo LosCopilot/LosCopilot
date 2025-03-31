@@ -240,3 +240,27 @@ svg {
     object-fit: cover;
     /* Evita deformaciones */
 }
+
+/* =====================0PARA EL JUEGO ==============
+*/
+#game {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: none;
+}
