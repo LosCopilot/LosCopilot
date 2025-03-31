@@ -95,83 +95,26 @@
             </div>
         </div>
     </section>
-    <!-- 4. Contacto -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
 
-        <div class="contact-info">
-            <p>✉️ Email: <a href="mailto:loscopilot@gmail.com">loscopilot@gmail.com</a></p>
-            <div class="social-links">
-                <a href="https://github.com/loscopilot" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
+
+    <!-- 4. Juego -->
+    <section id="game">
+        <h2>Juega a Mr. Mine</h2>
+
+        <div class="game-container">
+            <iframe src="https://mrmine.com/game/" title="Mr. Mine" scrolling="no"
+                allow="autoplay; payment; fullscreen; microphone; clipboard-read; focus-without-user-activation *; screen-wake-lock; gamepad; clipboard-write 'self' https://mrmine.com"
+                webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true"
+                style="border: 0px; width: 100%; height: 600px; min-width: 100%; min-height: 500px;">
+            </iframe>
         </div>
+
+        <p>
+            <a href="https://mrmine.com/" target="_blank">Mr. Mine</a> es desarrollado por
+            <a href="https://playsaurus.com" target="_blank">Playsaurus</a>, un estudio especializado en juegos idle.
+        </p>
     </section>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita recargar la página
-
-            let data = {
-                nombre: document.getElementById("nombre").value,
-                email: document.getElementById("email").value,
-                mensaje: document.getElementById("mensaje").value
-            };
-
-            fetch("https://script.google.com/macros/s/AKfycbxFHWF60U4zdKv_DrNQJcvEyeM2cdPj8OG3GfTl791IC1Opx-rgjCK90f8m_gEAuFzgjw/exec", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-                .then(response => response.text())
-                .then(data => {
-                    alert(data); // Muestra mensaje de confirmación
-                    document.getElementById("contact-form").reset();
-                })
-                .catch(error => alert("Error al enviar el mensaje"));
-        });
-    </script>
-
-
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let formData = {
-                nombre: document.getElementById("nombre").value,
-                email: document.getElementById("email").value,
-                mensaje: document.getElementById("mensaje").value
-            };
-
-            fetch("https://script.google.com/macros/s/AKfycbyVHSiqIbKfx8AcSycVYDp_iWSyHuTyB6Z1s22m7FUIc4pArqXnV8f5qSbYkVdAXlwjDw/exec", {
-                method: "POST",
-                mode: "cors",
-                body: JSON.stringify(formData),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-                .then(response => response.text())
-                .then(data => {
-                    console.log("Respuesta del servidor:", data);
-                    alert("Mensaje enviado correctamente.");
-                    document.getElementById("contact-form").reset();
-                })
-                .catch(error => {
-                    console.error("Error al enviar el mensaje:", error);
-                    alert("Error al enviar el mensaje. Revisa la consola.");
-                });
-        });
-    </script>
 
 
 
